@@ -1,0 +1,10 @@
+.button{
+    background: cornflowerblue;
+    width: 200px;
+}
+.bcg{
+    /* background-image: url('./wed/bcg.jpg'); */
+    height:500px;
+    width: 500px;
+    margin-top: 10px;
+}

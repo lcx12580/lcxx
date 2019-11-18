@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../index.css"type="text/css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <img src="../tb.jpg" alt=""style="width=1380px;height=200px">
+    <div>
+    <center><div class="bcg" style="background:url('../bcg.jpg')">
+        
+        <!-- <img src="../bcg.jpg" alt=""> -->
+    <center><img src="../lxj.jpg" alt=""style="width=10px;height=10px;margin-top: 30px;"> </center>
+
+    
+    <div style="width: 200px;height:100px; margin: 0 auto; background:rgba(255, 253, 154, 0.726);padding: 20px;">
+            
+            <div>螺旋剑</div>
+            <div>价格:5000魂</div>
+            <div id="sy">剩余数量:100</div>
+            <div>古老师的剑</div>
+            <div><button onclick="go()" class="button">抢购</button></div>
+    </div></div></center>
+   
+    <script>
+        var n=100;
+        async function go()
+        {
+            
+           var x =  await fetch("addOrder?user=111&goodsid=1&num="+n);
+           if(x.ok&&n>0)
+           {
+            n=n-1;
+            document.getElementById("sy").innerHTML="剩余数量:"+n;
+               alert("添加成功");
+           }
+           else
+           {
+                alert("添加失败,该商品已经售空");
+           }
+        }
+    </script>
+</body>
+</html>
